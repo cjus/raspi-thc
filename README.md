@@ -28,8 +28,8 @@ $ sudo cp ./bin/* /usr/local/bin
 With NodeJS installed you can pull this repo onto the Pi using:
 
 ```shell
-$ git clone 
-$ cd xxxx
+$ git clone https://github.com/pnxtech/raspi-thc.git
+$ cd raspi-thc
 ```
 
 Then run the setup script:
