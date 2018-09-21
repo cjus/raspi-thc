@@ -1,6 +1,8 @@
 # raspi-thc
 Raspberry Pi Zero W - Time Hacker Clock
 
+The Time Hacker Clock is a device based on teh Time Hacker Method.
+
 ## Setup
 
 ### Hardware Setup
@@ -9,7 +11,7 @@ This version of the Timer Hacker Clock requires a [Raspberry Pi Zero W](https://
 
 ### Software Setup
 
-Setup the Raspberry Pi Zero W using [Raspbian Lite](https://www.raspberrypi.org/downloads/raspbian/).  
+Setup the Raspberry Pi Zero W using [Raspbian Lite](https://www.raspberrypi.org/downloads/raspbian/).  Make sure to configure your current locale using raspi-config and enable WiFi settings.
 
 This THC also requires NodeJS.  For the Pi Zero W you'll need a version of Node for the ARMv6 processor. Check the [NodeJS distribution site](https://nodejs.org/en/download/) for a link to the latest verion in the Linux Binaries (ARM) section. Right click on the ARMv6 link to grab its URL. Then use a script similar to the one below on the Pi Zero.
 
@@ -22,4 +24,18 @@ $ tar -xvf node-v6.9.1-linux-armv6l.tar.xz
 $ cd node-v6.9.1-linux-armv6l/
 $ sudo cp ./bin/* /usr/local/bin
 ```
+
+With NodeJS installed you can pull this repo onto the Pi using:
+
+```shell
+$ git clone 
+$ cd xxxx
+```
+
+Then run the setup script:
+
+```shell
+$ ./setup.sh
+```
+
 
