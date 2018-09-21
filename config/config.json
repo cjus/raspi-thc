@@ -1,0 +1,7 @@
+{
+  "serviceName": "raspi-thc",
+  "serviceDescription": "Raspberry Pi Zero Time Hacker Clock",
+  "serviceIP": "",
+  "servicePort": 80
+}
+

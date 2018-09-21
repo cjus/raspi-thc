@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time Hacker Clock</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <style>
+      body {
+        background-color: lightgray;
+      }
+     .page-body {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        margin-top: 5rem;
+      }
+      .panel {
+        box-shadow: 5px 5px 5px rgba(0,0,0,.1);
+        justify-content: space-around;
+      }
+      .panel-body {
+        font-size: 1.6rem;
+        word-wrap: break-word;
+        padding: 2rem;
+        max-height: 20rem;
+        overflow-y: scroll;
+      }
+      .panel-icon {
+        top: 2px;
+        right: 4px;
+      }
+      .buttonbar {
+        margin: 0.75rem 1rem 0 0;
+      }
+      .graph {
+        border: solid lightgrey 1px;
+      }
+      .stats {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .leftSide {
+      }
+      .rightSide {
+      }
+      .errors {
+        color: red;
+      }
+    </style>
+	</head>
+	<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/preact"></script>
+
+    <script>
+const {Component, h, render} = window.preact;
+const ONE_SECOND = 1000;
+
+class App extends Component {
+  componentDidMount() {
+    this.setState({
+      title: 'Time Hacker Clock',
+      screen: 'main'
+    });
+    this.onScreenChange = this.onScreenChange.bind(this);
+  }
+
+  onScreenChange(screen) {
+    this.setState({
+      screen
+    });
+  }
+
+  render(props, state) {
+    return (
+      h('div', {id: 'app'},
+        h(Header, {title: state.title, onScreenChange: this.onScreenChange}),
+        h(Main, {screen: state.screen, onScreenChange: this.onScreenChange})
+      )
+    );
+  }
+}
+
+class Header extends Component {
+  render(props, state) {
+    return (
+      h('nav', {class: 'navbar navbar-inverse navbar-fixed-top'},
+        h('div', {class: 'nav-header'},
+          h('a', {class: 'navbar-brand', href: '#'}, props.title)
+        ),
+        h(ButtonBar, {onScreenChange: this.props.onScreenChange})
+      )
+    );
+  }
+}
+
+/**
+* @name ButtonBar
+* @summary Button Bar Component
+* @return {undefined}
+*/
+class ButtonBar extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  onPress(screen) {
+    this.props.onScreenChange(screen);
+  }
+
+  render(props, state) {
+    return (
+      h('div', {class: 'btn-group pull-right buttonbar', role: 'group', 'aria-label': 'Left Align'},
+        h('button', {'type': 'button', class: 'btn btn-default', onclick: this.onPress.bind(this, 'main')},
+          h('span', {class: 'glyphicon glyphicon-th', 'aria-hidden': true})
+        )
+      )
+    );
+  }
+}
+
+class Panel extends Component {
+  render(props, state) {
+    let style = {
+      'width': '100%',
+      'background-color': props.backgroundColor
+    };
+    return (
+      h('div', {class: 'panel panel-default', style},
+        h('div', {class: 'panel-heading'},
+          h('h3', {class: 'panel-title'},
+            props.icon && (
+              h('div', {class: `${props.titleColor}`},
+                h('span', {class: `glyphicon ${props.icon} panel-icon`, 'aria-hidden': true}),
+                h('span', {}, ` ${props.title}`)
+              )
+            ),
+            !props.icon && (props.title)
+          )
+        ),
+        h('div', {class: 'panel-body'}, props.body)
+      )
+    );
+  }
+}
+
+class MainScreen extends Component {
+  componentDidMount() {
+    this.setState({
+      status: []
+    })
+    this.getStatus();
+    setInterval(() => this.getStatus(), ONE_SECOND);
+  }
+
+  getStatus() {
+    fetch('/v1/thc/status')
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        if (res.result) {
+          this.setState({status: res.result});
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  formatFloat(num) {
+    return parseFloat(num).toFixed(2);
+  }
+
+  render(props, state) {
+    return (
+      h('div', {class: 'page-body'},
+      )
+    );
+  }
+}
+
+class Main extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render(props, state) {
+    let screen = false;
+    if (this.props.screen === 'main') {
+      screen = h(MainScreen, {});
+    }
+    return (
+      screen
+    );
+  }
+}
+
+render(h(App), document.body);
+    </script>
+	</body>
+</html>

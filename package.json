@@ -1,0 +1,22 @@
+{
+  "name": "raspi-thc",
+  "version": "0.0.1",
+  "description": "Raspberry Pi Zero Time Hacker Clock",
+  "author": {
+    "name": "Carlos Justiniano",
+    "email": "carlos.justiniano@gmail.com"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node raspi-thc.js"
+  },
+  "engines": {
+    "node": ">=8.11.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "3.5.1",
+    "xprocess": "2.0.0"
+  },
+  "devDependencies": {}
+}
