@@ -6,6 +6,7 @@ const http = require('http');
 const config = require('./config/config.json');
 const version = require('./package.json').version;
 const requestHandler = require('./lib/requestHandler');
+const timeHackerClock = require('./timeHackerClock');
 
 /**
  * @name setupExitHandlers
@@ -47,6 +48,7 @@ let setupExitHandlers = () => {
  */
 let main = async() => {
   try {
+    timeHackerClock.init(5, 20);
     setupExitHandlers();
 
     let logEntry = `Starting service ${config.serviceName}:${version} on ${config.serviceIP}:${config.servicePort}`;
