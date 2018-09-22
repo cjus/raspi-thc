@@ -6,7 +6,7 @@ const http = require('http');
 const config = require('./config/config.json');
 const version = require('./package.json').version;
 const requestHandler = require('./lib/requestHandler');
-const timeHackerClock = require('./timeHackerClock');
+const timeHackerClock = require('./lib/timeHackerClock');
 
 /**
  * @name setupExitHandlers
