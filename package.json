@@ -1,6 +1,6 @@
 {
   "name": "raspi-thc",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Raspberry Pi Zero Time Hacker Clock",
   "author": {
     "name": "Carlos Justiniano",

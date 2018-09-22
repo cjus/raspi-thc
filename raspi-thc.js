@@ -2,6 +2,7 @@
 * @name Service entry
 * @description This is the service entry point
 */
+const http = require('http');
 const config = require('./config/config.json');
 const version = require('./package.json').version;
 const requestHandler = require('./lib/requestHandler');
@@ -51,10 +52,8 @@ let main = async() => {
     let logEntry = `Starting service ${config.serviceName}:${version} on ${config.serviceIP}:${config.servicePort}`;
     console.log(logEntry);
 
-    const http = require('http');
-    let server;
-    server = http.createServer((request, response) => {
-      requestHandler.processHTTPRequest(request, response)
+    let server = http.createServer(async (request, response) => {
+      await requestHandler.processHTTPRequest(request, response)
         .catch((err) => {
           console.log('fatal', err);
         });
