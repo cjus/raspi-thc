@@ -3,13 +3,15 @@ Raspberry Pi Zero W - Time Hacker Clock
 
 A Time Hacker Clock is a device based on the Time Hacker Method (THM). THM combines simple productivity guidelines with shapes or colors to quickly convey how much time remains in a given day or time block.
 
-This version of the clock uses a Raspberry Pi Zero and a light strip to cast color onto a nearby wall.  The colors used from the [HSV color space](https://en.wikipedia.org/wiki/HSL_and_HSV), essentially 120 degrees of colors in the range of green to red.
+This version of the clock uses a Raspberry Pi Zero and a light strip to cast color onto a nearby wall.
 
-<img src="./images/20180923_112941-01.jpeg" width="100%" />
+<img src="./images/color-cast.png" width="100%" />
 
-Communication with the clock is done via a WiFi connection using a web browser and simple API.
+The colors used from the [HSV color space](https://en.wikipedia.org/wiki/HSL_and_HSV), essentially the colors from green to red in a 120 degrees range.
 
 <img src="./images/hsv.png" width="50%" />
+
+Communication with the clock is done via a WiFi connection using a web browser and simple API.
 
 ## Setup
 
