@@ -9,6 +9,11 @@ The Time Hacker Clock is a device based on teh Time Hacker Method.
 
 This version of the Timer Hacker Clock requires a [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) (WiFi) computer and a [Pimoroni Blinkt light strip component](https://shop.pimoroni.com/products/blinkt). Both the Raspberry Pi and the Blinkt are available in the US from Amazon and [Adafruit](https://www.adafruit.com/product/3195).
 
+### Other
+
+* Case: http://a.co/d/hf4pVjN
+* Wall Heat Shrink Tubing: http://a.co/d/dQBUwDg
+
 ### Software Setup
 
 Setup the Raspberry Pi Zero W using [Raspbian Lite](https://www.raspberrypi.org/downloads/raspbian/).  Make sure to configure your current locale using raspi-config and enable WiFi settings.
@@ -37,5 +42,3 @@ Then run the setup script:
 ```shell
 $ ./setup.sh
 ```
-
-
