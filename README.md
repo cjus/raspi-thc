@@ -1,7 +1,7 @@
 # raspi-thc
 Raspberry Pi Zero W - Time Hacker Clock
 
-A Time Hacker Clock is a device based on the Time Hacker Method (THM). THM combines simple productivity guidelines with shapes or colors to quickly convey how much time remains in a given day or time block.
+A Time Hacker Clock is a device based on the Time Hacker Method (THM). THM combines simple productivity guidelines with devices that emit shapes or colors to quickly convey how much time remains in a given day or time block.
 
 This version of the clock uses a Raspberry Pi Zero and a light strip to cast color onto a nearby wall.
 
