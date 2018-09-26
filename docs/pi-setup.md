@@ -1,10 +1,10 @@
-## Raspberry Pi Zero W Setup
+# Raspberry Pi Zero W Setup
 
 Setup the Raspberry Pi Zero W using [Raspbian Lite](https://www.raspberrypi.org/downloads/raspbian/). The version I used was `2018-06-27-raspbian-stretch-lite.img`
 
 The following instructors are Mac OSX centric but not too different for how you'd do this using other operating systems.
 
-**Locate SD card**
+## Locate SD card
 
 On Mac you can do this using diskutil via the command line.  Execute the command below and look for a /dev/disk that matches the size of your SD card.  For me, that’s /dev/disk3
 
@@ -12,7 +12,7 @@ On Mac you can do this using diskutil via the command line.  Execute the command
 $ diskutil list
 ```
 
-**Unmount the SD card**
+## Unmount the SD card
 
 Next unmount the SD card using the disk number.
 
@@ -20,7 +20,7 @@ Next unmount the SD card using the disk number.
 $ diskutil unmountDisk /dev/disk3
 ```
 
-**Flash the OS image**
+## Flash the OS image
 
 Use the `dd` command to flash the Raspbian lite image onto your SD card.  Be careful when doing this!
 
@@ -66,7 +66,7 @@ $ cd ~
 $ diskutil unmountDisk /dev/disk3
 ```
 
-**Connecting to and configuring your Raspberry Pi**
+## Connecting to and configuring your Raspberry Pi
 
 Next, insert the SD into your Pi Zero and boot the device.
 

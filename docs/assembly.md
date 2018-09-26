@@ -1,4 +1,4 @@
-## Hardware assembly
+# Hardware assembly
 
 I found a Pi Zero case from iUniker which proved ideal given its GPIO opening on the top of the case.
 
