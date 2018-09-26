@@ -22,35 +22,7 @@ $ diskutil unmountDisk /dev/disk3
 
 **Flash the OS image**
 
-Use the dd command to flash the Raspbian lite image onto your SD card.  Be careful when doing this!
-
-This is a good time to mention that the `dd` command can be very dangerous if you're not careful using it. Always make sure that you're pointing `dd` to the correct disk drive! You wouldn't want to erase the wrong drive. After all, there's a reason why the command is known as the Disk Destroyer, but that's not what dd stands for. See this bit of [`dd`](https://medium.com/r/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDd_%2528Unix%2529) history if you're interested.
-
-```shell
-$ sudo dd bs=1m if=./2018-06-27-raspbian-stretch-lite.img of=/dev/disk3 conv=sync
-```
-
-While dd is running you can press ctrl-t on your keyboard to check on the status.  The SD disk flash can take a while based on the speed of your SD card.
-
-It's recommended that you use a Class 6 or Class 10 microSDHC card for performance reasons.
-
-##### Locate SD card
-On Mac you can do this using diskutil via the command line.  Execute the command below and look for a /dev/disk that matches the size of your SD card.  For me, that’s /dev/disk3
-
-```shell
-$ diskutil list
-```
-
-## Unmount the SD card
-Next unmount the sd card using the disk number.
-
-```shell
-$ diskutil unmountDisk /dev/disk3
-```
-
-## Flash the OS image
-
-Use the dd command to flash the Raspbian lite image onto your SD card.  Be careful when doing this!
+Use the `dd` command to flash the Raspbian lite image onto your SD card.  Be careful when doing this!
 
 This is a good time to mention that the `dd` command can be very dangerous if you're not careful using it. Always make sure that you're pointing `dd` to the correct disk drive! You wouldn't want to erase the wrong drive. After all, there's a reason why the command is known as the Disk Destroyer, but that's not what dd stands for. See this bit of [`dd`](https://medium.com/r/?url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDd_%2528Unix%2529) history if you're interested.
 
@@ -93,6 +65,8 @@ Safely unmount the SD after your changes.
 $ cd ~
 $ diskutil unmountDisk /dev/disk3
 ```
+
+**Connecting to and configuring your Raspberry Pi**
 
 Next, insert the SD into your Pi Zero and boot the device.
 
