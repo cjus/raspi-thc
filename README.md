@@ -23,5 +23,6 @@ The hardware assembly instructions are posted [here](./docs/assembly.md)
 
 ### Software
 
-First download and configure your Raspberry Pi using these [instructions](./docs/pi-setup.md).
-Then proceed to installing the [remaining software](./docs/software.md).
+First download and configure your Raspberry Pi then proceed to installing the remaining software.
+
+[Build](./docs/assembly.md) | [Setup Pi W](./docs/pi-setup.md) | [Install software](./docs/software.md)
