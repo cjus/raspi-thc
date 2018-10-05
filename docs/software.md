@@ -1,4 +1,4 @@
-# Software setup
+# Install Software
 
 With your Raspberry Pi configured you can proceed to install the required software.
 
