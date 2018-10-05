@@ -105,4 +105,4 @@ $ sudo raspi-config
 
 ---
 
-[Return to main](../README.md) | [Build](../docs/assembly.md) | [Setup Pi W](../docs/pi-setup.md) | [Install software](../docs/software.md)
+[Return to main](../README.md) | [Build](../docs/assembly.md) | [Setup Pi W](../docs/pi-setup.md) | [Install software](../docs/software.md) | [Controlling the clock](../docs/controlling.md)

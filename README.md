@@ -22,4 +22,4 @@ Review these docs to build your own version.
 * [Build](./docs/assembly.md)
 * [Setup Pi W](./docs/pi-setup.md)
 * [Install software](./docs/software.md)
-
+* [Controlling the clock](./docs/controlling.md)
