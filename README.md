@@ -7,7 +7,7 @@ This version of the clock uses a Raspberry Pi Zero and a light strip to cast col
 
 <img src="./images/color-cast.png" width="100%" />
 
-The colors used are from the [HSV color space](https://en.wikipedia.org/wiki/HSL_and_HSV), essentially the colors from green to red in a 120-degree range.
+The colors used are from the [HSV color space](https://en.wikipedia.org/wiki/HSL_and_HSV), essentially the colors from green to red in a 120-degree range.  A green light represents having more available time and a red light indicates the available time is expiring.
 
 <img src="./images/hsv.png" width="50%" />
 
