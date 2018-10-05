@@ -17,5 +17,9 @@ Communication with the clock is done via a WiFi connection using a web browser a
 
 This version of the Timer Hacker Clock requires a [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) (WiFi) SBC and a [Pimoroni Blinkt light strip component](https://shop.pimoroni.com/products/blinkt). Both the Raspberry Pi and the Blinkt are available in the US from Amazon and [Adafruit](https://www.adafruit.com/product/3195).
 
----
-[Build](./docs/assembly.md) | [Setup Pi W](./docs/pi-setup.md) | [Install software](./docs/software.md)
+Review these docs to build your own version.
+
+* [Build](./docs/assembly.md)
+* [Setup Pi W](./docs/pi-setup.md)
+* [Install software](./docs/software.md)
+
