@@ -1,5 +1,5 @@
 # raspi-thc
-Raspberry Pi Zero W - Time Hacker Clock
+Raspberry Pi - Time Hacker Clock
 
 A Time Hacker Clock is a device based on the Time Hacker Method (THM). THM combines simple productivity guidelines with devices that emit shapes or colors to quickly convey how much time remains in a given day or time block.
 
@@ -17,7 +17,7 @@ Communication with the clock is done via a WiFi connection using a web browser a
 
 ### Hardware
 
-This version of the Timer Hacker Clock requires a [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) (WiFi) computer and a [Pimoroni Blinkt light strip component](https://shop.pimoroni.com/products/blinkt). Both the Raspberry Pi and the Blinkt are available in the US from Amazon and [Adafruit](https://www.adafruit.com/product/3195).
+This version of the Timer Hacker Clock requires a [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) (WiFi) SBC and a [Pimoroni Blinkt light strip component](https://shop.pimoroni.com/products/blinkt). Both the Raspberry Pi and the Blinkt are available in the US from Amazon and [Adafruit](https://www.adafruit.com/product/3195).
 
 The hardware assembly instructions are posted [here](./docs/assembly.md)
 
