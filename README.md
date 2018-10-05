@@ -13,16 +13,9 @@ The colors used are from the [HSV color space](https://en.wikipedia.org/wiki/HSL
 
 Communication with the clock is done via a WiFi connection using a web browser and simple API.
 
-## Build instructions
-
-### Hardware
+## Build your own device
 
 This version of the Timer Hacker Clock requires a [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) (WiFi) SBC and a [Pimoroni Blinkt light strip component](https://shop.pimoroni.com/products/blinkt). Both the Raspberry Pi and the Blinkt are available in the US from Amazon and [Adafruit](https://www.adafruit.com/product/3195).
 
-The hardware assembly instructions are posted [here](./docs/assembly.md)
-
-### Software
-
-First download and configure your Raspberry Pi then proceed to installing the remaining software.
-
+---
 [Build](./docs/assembly.md) | [Setup Pi W](./docs/pi-setup.md) | [Install software](./docs/software.md)
