@@ -24,3 +24,10 @@ Review these docs to build your own version.
 * [Setup Pi W](./docs/pi-setup.md)
 * [Install software](./docs/software.md)
 * [Controlling the clock](./docs/controlling.md)
+
+## Other Time Hacker Clocks
+
+* [arduino-thc](https://github.com/cjus/arduino-thc) - The Arduino BLE Time Hacker Clock
+* [web-thc](https://github.com/cjus/web-thc) The web-based Time Hacker Clock
+
+
