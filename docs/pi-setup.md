@@ -46,7 +46,7 @@ Create an empty ssh file to tell the OS that you wish to enable SSH access:
 $ touch ssh
 ```
 
-Next create a `wpa_supplicant.conf` file with the following, make sure to replace your ssid and psk file.
+Next create a `wpa_supplicant.conf` file with the following, make sure to replace your ssid and psk fields with your router's settings.
 
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
