@@ -2,7 +2,7 @@
 
 Setup the Raspberry Pi Zero W using [Raspbian Lite](https://www.raspberrypi.org/downloads/raspbian/). The version I used was `2018-06-27-raspbian-stretch-lite.img`
 
-The following instructors are Mac OSX centric but not too different for how you'd do this using other operating systems.
+The following instructions are Mac OSX centric but not too different for how you'd do this using other operating systems.
 
 ## Locate SD card
 
